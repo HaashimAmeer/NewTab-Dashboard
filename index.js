@@ -6,6 +6,9 @@ fetch(
     console.log(data);
     // change to regular temporarily for loading time
     let imgURL = data.urls.regular;
-    console.log(imgURL);
+
     document.body.style.backgroundImage = `url(${imgURL})`;
+    document.getElementById(
+      "author-info"
+    ).textContent = `By: ${data.user.name}`;
   });
