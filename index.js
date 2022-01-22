@@ -14,7 +14,12 @@ fetch(
   });
 
 fetch("https://api.coingecko.com/api/v3/coins/dogecoin")
-  .then((res) => res.json())
+  .then((res) => {
+    if (!res.ok) {
+      throw Error("Something went wrong!");
+    }
+    return res.json();
+  })
   .then((data) => {
     console.log(data);
     // .market_data.current_price.usd
