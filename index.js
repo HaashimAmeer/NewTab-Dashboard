@@ -5,7 +5,7 @@ fetch(
   .then((data) => {
     console.log(data);
     // change to regular temporarily for loading time
-    let imgURL = data.urls.regular;
+    let imgURL = data.urls.full;
 
     document.body.style.backgroundImage = `url(${imgURL})`;
     document.getElementById(
